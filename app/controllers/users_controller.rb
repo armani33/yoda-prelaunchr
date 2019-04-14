@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   # before_action :handle_ip, only: :create
 
   def new
-    @bodyId = 'home'
-    @is_mobile = mobile_device?
+    # @bodyId = 'home'
+    # @is_mobile = mobile_device?
 
     @user = User.new
 
