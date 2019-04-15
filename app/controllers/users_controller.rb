@@ -3,13 +3,15 @@ class UsersController < ApplicationController
   # before_action :handle_ip, only: :create
 
   def new
-    # @bodyId = 'home'
-    # @is_mobile = mobile_device?
 
     @user = User.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html(&:phone)
+      # do |html|
+      # html.phone
+      # html.tablet
+      # end
     end
   end
 
