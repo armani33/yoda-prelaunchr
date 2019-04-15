@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :skip_first_page, only: :new
+  before_action :skip_first_page, only: :new
   # before_action :handle_ip, only: :create
 
   def new
@@ -16,19 +16,20 @@ class UsersController < ApplicationController
 
   def create
     ref_code = cookies[:h_ref]
-    @user = User.new(user_params)
+    email = params[:user][:email]
+    @user = User.new(email: email)
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
+
     if @user.save
       cookies[:h_email] = { value: @user.email }
       redirect_to refer_a_friend_path
     else
-      logger.info("Error saving user with email, #{user_params}")
-      redirect_to root_path, alert: 'Something went wrong 1!'
+      logger.info("Error saving user with email, #{email}")
+      redirect_to root_path, alert: 'Something went wrong 111!'
     end
   end
 
   def refer
-
     @user = User.find_by_email(cookies[:h_email])
 
     respond_to do |format|

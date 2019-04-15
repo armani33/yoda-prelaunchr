@@ -1,6 +1,6 @@
 <div class="key"></div>
 <p class="byline brandon">Be the first to know</p>
-<%= form_for @user, :url => { :action => "create" } do |f| %>
+<%= form_for @user, url: users_create_path, method: :post do |f| %>
   <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
   <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
 <% end %>
