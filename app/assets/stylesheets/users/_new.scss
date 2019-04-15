@@ -1,0 +1,334 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar-back-container{
+  height: 55px;
+}
+.home-container{
+}
+
+.first-container{
+  width: 100%;
+  height: 93.5vh;
+  position: relative;
+  .text-part{
+    display: flex;
+
+    .empty-left-part{
+      flex-basis: 39%;
+      height: 100px;
+    }
+    .main-text-1{
+      margin-top: 100px;
+      z-index: 1;
+      color: $black;
+      font-family: $body-font;
+      display: flex;
+      flex-direction: column;
+      h1{
+        margin-bottom:50px;
+        padding:0;
+        font-weight: 500;
+        font-size: 50px;
+        span{
+          color: $green;
+        }
+      }
+      h2{
+        margin:0;
+        padding:0;
+        font-weight: 500;
+        font-size: 22px;
+        width: 100%;
+        text-align: center;
+        span{
+          color: $green;
+        }
+      }
+      .form{
+        margin-top: 50px;
+        text-align: left;
+        p{
+          font-family: $nav-menu-font;
+        }
+      }
+      // .action-button{
+      //   margin-top: 82px;
+      //   text-align: center;
+      //   a{
+      //     padding: 10px 20px;
+      //     background-color: transparent;
+      //     border: 3px solid $green;
+      //     border-radius: 7px;
+      //     font-family: $nav-menu-font;
+      //     font-size: 20px;
+      //     color: $black;
+      //     text-decoration: none;
+      //     &:hover{
+      //     background-color: $green;
+      //     }
+      //   }
+      // }
+    }
+  }
+  .images-container{
+    .yoda-image{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.second-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  .text-content{
+    flex-basis: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main-text-2{
+      font-family: $body-font;
+      margin-left: 100px;
+      h1{
+        font-weight: 500;
+        font-size: 77px;
+        span{
+          color: $green;
+        }
+      }
+      p{
+        font-size: 37px;
+        margin: 25px 0 70px 8px;
+        color: $dark-grey
+      }
+      img{
+        width: 50%;
+      }
+    }
+  }
+  .iphone-container{
+    flex-basis: 43%;
+    display: flex;
+    align-items: center;
+    .iphone{
+      margin-top: 100px;
+      margin-left: 20px;
+      width: 400px;
+    }
+  }
+}
+.third-container{
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  .yoda-bike-image{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  .text-container{
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 130px;
+    .main-text-3{
+      font-family: $body-font;
+      h1{
+        color: $black;
+        font-weight: 500;
+        font-size: 55px;
+        span{
+          color: $green;
+        }
+      }
+      p{
+        font-size: 35px;
+        margin: 25px 0 90px 8px;
+        color: $dark-grey;
+      }
+      .form{
+        margin-top: 50px;
+        text-align: left;
+        p{
+          font-family: $nav-menu-font;
+          font-size: 20px;
+          color: $black;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      // a{
+      //   padding:10px 20px;
+      //   background-color: transparent;
+      //   border: 3px solid $green;
+      //   border-radius: 7px;
+      //   font-family: $nav-menu-font;
+      //   font-size: 20px;
+      //   color: $black;
+      //   text-decoration: none;
+      //   margin-left: 8px;
+      //   &:hover{
+      //     background-color: $green;
+      //     color: white;
+      //   }
+      // }
+    }
+  }
+}
+
+
+
+.fourth-container{
+  height: 80vh;
+  background-color: white;
+  display: flex;
+  position: relative;
+  .text-container{
+    flex-basis: 61%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main-text-4{
+      font-family: $body-font;
+      margin-left: 180px;
+      h1{
+        color: $black;
+        font-weight: 500;
+        font-size: 55px;
+        span{
+          color: $green;
+        }
+      }
+      .license-text{
+        p{
+        font-size: 35px;
+        margin: 25px 0 90px 8px;
+        color: $dark-grey;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        }
+        .no-license{
+          display: flex;
+          align-items: center;
+          img{
+            margin-bottom: 25px;
+            margin-right: 20px;
+            width: 80px;
+          }
+        }
+        .yes-license{
+          display: flex;
+          align-items: center;
+          img{
+            margin-bottom: 25px;
+            margin-right: 20px;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+  .iphone-container{
+    flex-basis: 39%;
+    img{
+      width: 370px;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+.contact-container{
+  height: 45vh;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    h3{
+      color: white;
+      font-weight: 400;
+      font-family: $body-font;
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+    p{
+      color: $green;
+      font-family: $body-font;
+      font-weight: 300;
+      font-size: 25px;
+      margin-bottom: 45px;
+    }
+    .contact-bullet-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: start-flex;
+      height: 200px;
+      width: 100%;
+      .bullet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+        width: 140px;
+        }
+        .title{
+          color: white;
+          font-size: 15px;
+          font-weight: 700;
+          margin-top: 15px;
+          margin-bottom:0;
+        }
+        .info{
+          color: white;
+          font-size: 12px;
+          font-weight: 500;
+          margin-top: 5px;
+
+          padding:0;
+        }
+        a{
+          padding: 0;
+          &:hover{
+          padding: 0;
+          }
+        }
+      }
+      .social{
+        .title{
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

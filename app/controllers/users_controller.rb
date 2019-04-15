@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   # before_action :handle_ip, only: :create
 
   def new
-
     @user = User.new
 
     respond_to do |format|
