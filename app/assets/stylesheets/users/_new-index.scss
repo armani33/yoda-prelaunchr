@@ -1,0 +1,22 @@
+.new-index-container{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-index-content{
+  background-color: white;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+}
+.form-new-index p{
+  font-family: $body-font;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 9px;
+  span{
+    color: $green
+  }
+}

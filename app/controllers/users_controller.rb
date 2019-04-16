@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :skip_first_page, only: :new
+  before_action :set_variant, only: [:new, :refer]
   # before_action :handle_ip, only: :create
 
   def new
@@ -14,17 +15,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def new_index
+    @user = User.new
+  end
+
   def create
     ref_code = cookies[:h_ref]
-    email = params[:user][:email]
-    @user = User.new(email: email)
+    @user = User.new(user_params)
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
 
     if @user.save
       cookies[:h_email] = { value: @user.email }
       redirect_to refer_a_friend_path
     else
-      logger.info("Error saving user with email, #{email}")
+      logger.info("Error saving user with email, #{user_params}")
       redirect_to root_path, alert: 'Something went wrong 111!'
     end
   end
@@ -62,6 +66,21 @@ class UsersController < ApplicationController
       redirect_to refer_a_friend_path
     else
       cookies.delete :h_email
+    end
+  end
+
+  def set_variant
+    case request.user_agent
+    when /iPhone/i
+      request.variant = :phone
+    when /Android/i && /mobile/i
+      request.variant = :phone
+    when /Windows Phone/i
+      request.variant = :phone
+    # when /Android/i
+    #   request.variant = :tablet
+    # when /iPad/i
+    #   request.variant = :tablet
     end
   end
 

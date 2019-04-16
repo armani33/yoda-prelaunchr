@@ -1,0 +1,27 @@
+/* -------------------------------------
+ * Your CSS code for flash notices and alerts
+* ------------------------------------- */
+
+.alert {
+  margin: 0;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: orange;
+}
+.alert-info {
+  background: green;
+}
+.alert-warning {
+  background: red;
+}
+.error{
+  margin-left: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: orange;
+}
+.notice{
+  font-family: $nav-menu-font;
+  color: orange;
+}
