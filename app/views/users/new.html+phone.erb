@@ -3,7 +3,8 @@
 <div class="home-mobile-container">
   <div class="first-mobile-container">
     <div class="main-mobile-text-1">
-      <h1>The best way to <span>move</span><br>around cities</h1>
+      <h1><span>Yoda</span> is coming</h1>
+      <h2>BEST WAY TO MOVE AROUND CITIES</h2>
       <div class="form">
         <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
           <% if Rails.application.config.ended %>
@@ -14,7 +15,7 @@
         </div>
       </div>
     </div>
-    <%= image_tag('yoda_mobile_1.png', class: "yoda-image") %>
+    <%= image_tag('yoda_mobile.png', class: "yoda-image") %>
   </div>
   <div class="second-mobile-container">
     <div class="main-mobile-text-2">
@@ -83,4 +84,19 @@
   </div>
   <%= render "shared/footer" %>
 </div>
+
+<script>
+  $(document).ready(function() {
+      $(window).scroll(function() {
+          var height = $('.first-mobile-container').height();
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop >= height - 650) {
+              $('.navbar-container').addClass('solid-nav');
+          } else {
+              $('.navbar-container').removeClass('solid-nav');
+          }
+      });
+  });
+</script>
 

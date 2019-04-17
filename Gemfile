@@ -5,6 +5,7 @@ ruby '2.5.3'
 gem 'activeadmin'
 gem 'delayed_job_active_record'
 gem 'devise'
+gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
