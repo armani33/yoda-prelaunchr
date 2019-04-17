@@ -11,73 +11,57 @@
 .first-container{
   width: 100%;
   height: 93.5vh;
-  position: relative;
-  .text-part{
+  display: flex;
+  flex-direction: column;
+  .first-container-top{
+    flex-basis: 67%;
     display: flex;
-
-    .empty-left-part{
-      flex-basis: 39%;
-      height: 100px;
+    background: image-url("background-website.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    .first-container-left{
+      flex-basis: 45%;
     }
-    .main-text-1{
-      margin-top: 100px;
-      z-index: 1;
-      color: $black;
-      font-family: $body-font;
+    .first-container-right{
+      flex-basis: 55%;
       display: flex;
-      flex-direction: column;
-      h1{
-        margin-bottom:50px;
-        padding:0;
-        font-weight: 500;
-        font-size: 50px;
-        span{
-          color: $green;
+      justify-content: center;
+      align-items: center;
+      .text-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 160px;
+        h1{
+          margin-bottom:20px;
+          padding:0;
+          font-weight: 500;
+          font-size: 90px;
+          span{
+            color: $green;
+          }
+        }
+        h2{
+          margin:0;
+          padding:0;
+          font-weight: 500;
+          font-size: 30px;
+          color: $dark-grey;
+          font-family: $body-font;
+          width: 100%;
+          text-align: center;
         }
       }
-      h2{
-        margin:0;
-        padding:0;
-        font-weight: 500;
-        font-size: 22px;
-        width: 100%;
-        text-align: center;
-        span{
-          color: $green;
-        }
-      }
-      .form{
-        margin-top: 50px;
-        text-align: left;
-        p{
-          font-family: $nav-menu-font;
-        }
-      }
-      // .action-button{
-      //   margin-top: 82px;
-      //   text-align: center;
-      //   a{
-      //     padding: 10px 20px;
-      //     background-color: transparent;
-      //     border: 3px solid $green;
-      //     border-radius: 7px;
-      //     font-family: $nav-menu-font;
-      //     font-size: 20px;
-      //     color: $black;
-      //     text-decoration: none;
-      //     &:hover{
-      //     background-color: $green;
-      //     }
-      //   }
-      // }
     }
   }
-  .images-container{
-    .yoda-image{
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
+  .first-container-bottom{
+    flex-basis: 33%;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

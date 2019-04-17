@@ -2,24 +2,25 @@
 <div class="navbar-back-container"></div>
 <div class="home-container">
   <div class="first-container">
-    <div class="text-part">
-      <div class="empty-left-part"></div>
-      <div class="main-text-1">
-        <h1>Moving around <span>cities</span><br>has never been so perfect</h1>
-        <h2><span>Yoda</span>’s mission is to make cities more livable by reducing car<br>usage, traffic, and carbon emissions.</h2>
-        <div class="form">
-          <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-            <% if Rails.application.config.ended %>
-              <%= render "users/campaign_ended" %>
-            <% else %>
-              <%= render "users/campaign_ongoing" %>
-            <% end %>
-          </div>
+    <div class="first-container-top">
+      <div class="first-container-left"></div>
+      <div class="first-container-right">
+        <div class="text-part">
+          <h1><span>Yoda</span> is coming</h1>
+          <h2>BEST WAY TO MOVE AROUND CITIES</h2>
         </div>
       </div>
     </div>
-    <div class="images-container">
-      <%= image_tag('background-website.svg', class: "yoda-image") %>
+    <div class="first-container-bottom">
+      <div class="form">
+        <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+          <% if Rails.application.config.ended %>
+            <%= render "users/campaign_ended" %>
+          <% else %>
+            <%= render "users/campaign_ongoing" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
   <div class="second-container">
@@ -107,3 +108,19 @@
   </div>
   <%= render "shared/footer" %>
 </div>
+
+<script>
+  $(document).ready(function() {
+      $(window).scroll(function() {
+          var height = $('.first-container').height();
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop >= height - 820) {
+            console.log('yooooo')
+              $('.navbar-container').addClass('solid-nav');
+          } else {
+              $('.navbar-container').removeClass('solid-nav');
+          }
+      });
+  });
+</script>
