@@ -16,9 +16,15 @@
             <a href="#"><li>Safety</li></a>
           </ul> -->
         </div>
-        <div class="action-button">
-          <%= link_to 'Get Early Acces', subscribe_path %>
-        </div>
+        <% if @nav_link_refer %>
+          <div class="action-button">
+            <%= link_to 'Invite Friends', root_path %>
+          </div>
+        <% else %>
+          <div class="action-button">
+            <%= link_to 'Get Early Acces', subscribe_path %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

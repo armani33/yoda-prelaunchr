@@ -1,29 +1,26 @@
-<div class="header">
-  <div class="content">
-    <p class="logo brandon">Harry&#8217;s</p>
-    <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
-  </div>
-</div>
+<%= render 'shared/navbar' %>
+<div class="refer-friends-container">
+  <div class="refer-friends-content">
 
-<div class="hero">
-  <div class="page-content clearfix">
-    <div class="mammoth">
-      <span class="need brandon">Shaving Is<br>Evolving</span>
+
+    <div class="refer-friends-top">
+        <div class="refer-friends-left"></div>
+        <div class="refer-friends-right">
+          <div class="text-part">
+            <h2>DON'T LEAVE YOUR FRIENDS BEHIND</h2>
+            <h1><span>INVITE</span> FRIENDS &<br>EARN PRODUCT</h1>
+            <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
+            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+            <div class="social-links">
+              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"><i class="fab fa-facebook"></i></a>
+              <div class="sep"></div>
+              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </div>
+            <p>Share your unique link via email, Facebook or Twitter<br>and earn YodaCity's goods for each friend who signs up.</p>
+          </div>
+        </div>
     </div>
-    <div class="share-wrap">
-      <p class="why brandon">Don't leave your friends behind</p>
-      <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-      <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
-      <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-      <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
-      <div class="social-links">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-        <div class="sep"></div>
-        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <%
   referrals_count = @user.referrals.count
@@ -41,47 +38,10 @@
     end
   }
 %>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-  <div class="page-content">
-    <p class="callout brandon">Here's How It Works:</p>
-    <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
-      <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
-          <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
 
-          <div class="tooltip">
-            <img src="<%= stop["image"] %>" height="254">
-          </div>
-        </li>
-      <% end %>
-    </ul>
+    <div class="refer-friends-bottom">
 
-    <div class="progress">
-      <div class="mover">
-        <div class="bar clearfix"></div>
-      </div>
     </div>
 
-    <%
-      words = ''
-      if referrals_count == 1
-        words = 'friend has'
-      else
-        words = 'friends have'
-      end
-    %>
-
-    <% if referrals_count == 0 %>
-      <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
-    <% else %>
-      <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
-    <% end %>
-    <p class="check brandon">Keep checking</p>
-
-    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
-    <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
   </div>
 </div>

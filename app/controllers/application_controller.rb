@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     return if campaign_ended || !params[:ref]
 
     unless User.find_by_referral_code(params[:ref]).nil?
-      h_ref = { value: params[:ref], expires: 1.week.from_now }
+      h_ref = { value: params[:ref], expires: 52.week.from_now }
       cookies[:h_ref] = h_ref
     end
 

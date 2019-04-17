@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :skip_first_page, only: :new
+  before_action :skip_first_page, only: :new
   before_action :set_variant, only: [:new, :refer]
   # before_action :handle_ip, only: :create
 
@@ -34,6 +34,7 @@ class UsersController < ApplicationController
   end
 
   def refer
+    @nav_link_refer = true
     @user = User.find_by_email(cookies[:h_email])
 
     respond_to do |format|
