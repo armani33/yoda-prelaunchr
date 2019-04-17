@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :skip_first_page, only: :new
+  # before_action :skip_first_page, only: :new
   before_action :set_variant, only: [:new, :refer]
   # before_action :handle_ip, only: :create
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       redirect_to refer_a_friend_path
     else
       logger.info("Error saving user with email, #{user_params}")
-      redirect_to root_path, alert: 'Something went wrong 111!'
+      redirect_to root_path, alert: 'Something went wrong!'
     end
   end
 

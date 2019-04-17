@@ -244,7 +244,7 @@
 }
 .contact-container{
   height: 45vh;
-  background-color: #2B2B2B;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +285,7 @@
           color: white;
           font-size: 15px;
           font-weight: 700;
-          margin-top: 15px;
+          // margin-top: 5px;
           margin-bottom:0;
         }
         .info{
@@ -305,7 +305,7 @@
       }
       .social{
         .title{
-          margin-top: 8px;
+          margin-top: -7px;
         }
       }
     }
