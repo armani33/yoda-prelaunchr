@@ -1,4 +1,6 @@
-<p class="byline brandon">BE THE FIRST TO KNOW <span>&</span> GET REWARDS</p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<p>BE THE FIRST TO KNOW <span>&</span> GET REWARDS</p>
 <%= form_for @user, url: users_create_path, method: :post do |f| %>
   <%= f.text_field :email, :placeholder => "Enter Email" %>
   <input class="submit brandon" name="commit" type="submit" value="Step Inside" />

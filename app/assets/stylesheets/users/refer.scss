@@ -28,6 +28,7 @@
           font-weight: 500;
           font-size: 40px;
           text-align: center;
+          letter-spacing: 2px;
           span{
             color: $green;
           }
@@ -42,6 +43,7 @@
           width: 100%;
           text-align: center;
           margin-bottom: 20px;
+          letter-spacing: 2px;
         }
         p{
           text-align: center;
@@ -50,6 +52,7 @@
           font-size: 13px;
           margin-top: 20px;
           opacity: 0.8;
+          letter-spacing: 1px;
         }
         .copy-link{
           background-color: white;
@@ -81,9 +84,9 @@
       width: 100%;
       background: $light-grey;
       border-top: 1px solid $green;
-      padding-bottom: 100px;
       .page-content{
         position: relative;
+        margin: 0 270px;
       }
       .callout{
         text-align: center;
@@ -95,9 +98,169 @@
         letter-spacing: 2px;
         text-transform: uppercase;
       }
+      ul.products{
+        height: 105px;
+        width: 100%;
+        margin-top: 60px;
+        position: relative;
+        z-index: 1;
+        list-style: none;
+        li.title{
+          height: 100%;
+          text-transform: uppercase;
+          color: $black;
+          font-family: $body-font;
+          font-weight: 500;
+          font-size: 14px;
+          float: left;
+          margin-right: 68px;
+          width: 165px;
+          font-weight: bold;
+          .friends{
+            margin-top: 7px;
+            letter-spacing: 2px;
+          }
+          .rewards{
+            margin-top: 55px;
+            letter-spacing: 2px;
+          }
+        }
+        li.product{
+          height: 100%;
+          color: #074E6F;
+          width: 130px;
+          margin-right: 129px;
+          float: left;
+          position: relative;
+          .circle{
+            height: 35px;
+            width: 35px;
+            border-radius: 20px;
+            border: 1px solid #DAD9D2;
+            text-align: center;
+            line-height: 35px;
+            color: $dark-grey;
+            font-family: $body-font;
+            overflow: hidden;
+            background: white;
+            font-weight: bold;
+            font-size: 13px;
+            margin: 0 auto;
+          }
+          .sep{
+            width: 12px;
+            height: 2px;
+            background: transparent;
+            margin: 13px auto 13px;
+          }
+          // .caret{
+          //   width: 100%;
+          //   height: 10px;
+          //   background: image-url("refer/caret.png") center center no-repeat;
+          //   background-size: 16px 10px;
+          //   position: absolute;
+          //   bottom: -15px;
+          // }
+          // .selected .caret{
+          //   background: image-url("refer/caret-selected.png") center center no-repeat;
+          //   background-size: 16px 10px;
+          // }
+          .selected .circle{
+            background: $green !important;
+            border-color: white !important;
+            color: $dark-grey !important;
+          }
+          .selected p{
+            color: $green;
+            font-weight: bold;
+          }
+          .tooltip{
+            height: 254px;
+            width: 190px;
+            border: 2px solid $green;
+            position: absolute;
+            top: -285px;
+            left: -32px;
+            display: none;
+            background: #FFF;
+            img{
+              margin: 0 auto;
+              display: block;
+            }
+          }
+          p{
+            text-align: center;
+            font-family: $body-font;
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: $dark-grey;
+          }
+        }
+        li.product:last-child{
+          margin-right: 0;
+        }
+        li.product:hover{
+          .circle{
+            color: $dark-grey;
+            background: $green;
+            border-color: white;
+          }
+          .tooltip{
+            display: block;
+          }
+        }
+      }
+      .progress{
+        height: 4px;
+        width: 100%;
+        background: image-url("refer/progress-bg.png") 0 0 repeat-x;
+        background-size: 1px 4px;
+        position: absolute;
+        top: 130px;
+        z-index: 0;
+        .mover{
+          position: absolute;
+          top: 0;
+          left: 0;
+          .bar{
+            background: image-url("refer/progress-done.png") 0 0 repeat-x;
+            width: 130px;
+            height: 4px;
+            -webkit-background-size: 1px 4px;
+            background-size: 1px 4px;
+          }
+        }
+      }
+    }
+    p.place{
+      text-align: center;
+      font-size: 16px;
+      color: $dark-grey;
+      width: 100%;
+      font-family: $body-font;
+      font-weight: 500;
+      margin-top: 70px;
+      span{
+        color: #D90000;
+      }
+    }
+    p.check{
+      text-align: center;
+      font-family: $body-font;
+      font-size: 17px;
+      color: #858181;
+      width: 100%;
+      font-weight: 400;
+      margin-top: 10px;
     }
   }
 }
+
+.refer-friends-bottom-prizes .prize-two .progress .mover .bar{ width: 312px; }
+.refer-friends-bottom-prizes .prize-three .progress .mover .bar{ width: 566px; }
+.refer-friends-bottom-prizes .prize-four .progress .mover .bar{ width: 820px; }
+.refer-friends-bottom-prizes .prize-five .progress .mover .bar{ width: 1120px; }
 
 
 

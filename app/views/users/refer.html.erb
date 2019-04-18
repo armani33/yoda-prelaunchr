@@ -43,14 +43,50 @@
     <div class="refer-friends-bottom-prizes <% if found %>prize-<%= found["class"] %><% end %>">
       <div class="page-content">
         <p class="callout">Here's How It Works:</p>
-        <ul class="products clearfix">
+        <ul class="products">
+
+          <li class="title"><p class="friends">Friends Joined</p><p class="rewards">Yoda's Product</p></li>
+
+          <% stops.each do |stop| %>
+
+            <li class="product <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+              <div class="circle"><%= stop["count"] %></div>
+              <div class="sep"></div>
+              <p><%= stop["html"].html_safe %></p>
+
+              <div class="tooltip">
+                <img src="<%= stop["image"] %>" height="254">
+              </div>
+            </li>
+
+          <% end %>
 
         </ul>
+        <div class="progress">
+          <div class="mover">
+            <div class="bar"></div>
+          </div>
+        </div>
+
+        <%
+          words = ''
+          if referrals_count == 1
+            words = 'friend has'
+          else
+            words = 'friends have'
+          end
+        %>
+
+
+        <% if referrals_count == 0 %>
+          <p class="place"><span>No</span> friends have joined...Yet!</p>
+        <% else %>
+          <p class="place"><span><%= referrals_count %></span> <%= words %> joined</p>
+        <% end %>
+        <p class="check">Keep checking</p>
+
       </div>
     </div>
-
-
-
   </div>
 </div>
 
