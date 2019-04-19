@@ -170,9 +170,20 @@
 
 
 
+<script>
+  $(document).ready(function() {
+      $(window).scroll(function() {
+          var height = $('.refer-friends-content').height();
+          var scrollTop = $(window).scrollTop();
 
-
-
+          if (scrollTop >= height - 840) {
+              $('.navbar-container').addClass('solid-nav');
+          } else {
+              $('.navbar-container').removeClass('solid-nav');
+          }
+      });
+  });
+</script>
 
 
 
