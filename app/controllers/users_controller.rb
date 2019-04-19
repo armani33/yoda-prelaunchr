@@ -37,11 +37,14 @@ class UsersController < ApplicationController
     @nav_link_refer = true
     @user = User.find_by_email(cookies[:h_email])
 
-    respond_to do |format|
-      if @user.nil?
-        format.html { redirect_to root_path, alert: 'Something went wrong!' }
-      else
-        format.html # refer.html.erb
+    if @user.nil?
+      respond_to do |format|
+        format.html(&:phone)
+        redirect_to root_path, alert: 'Something went wrong!'
+      end
+    else
+      respond_to do |format|
+        format.html(&:phone) # refer.html.erb
       end
     end
   end

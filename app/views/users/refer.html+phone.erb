@@ -1,0 +1,183 @@
+<%= render "shared/navbar" %>
+<div class="navbar-back-container"></div>
+<div class="refer-mobile-container">
+  <div class="first-refer-friends-mobile-container">
+    <div class="refer-main-mobile-text-1">
+      <h2>DON'T LEAVE YOUR FRIENDS BEHIND</h2>
+      <h1><span>INVITE</span> FRIENDS &<br>EARN PRODUCT</h1>
+      <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
+      <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+      <div class="social-links">
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"><i class="fab fa-facebook"></i></a>
+        <div class="sep"></div>
+        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square"></i></a>
+      </div>
+      <p>Share your unique link via email, Facebook or Twitter<br>and earn YodaCity's goods for each friend who signs up.</p>
+    </div>
+    <%= image_tag('yoda_mobile.png', class: "yoda-image") %>
+  </div>
+
+
+
+<%
+  referrals_count = @user.referrals.count
+
+  stops = User::REFERRAL_STEPS
+
+  found = nil
+
+  stops.reverse_each { |stop|
+    if stop["count"] <= referrals_count and !found
+      stop["selected"] = true
+      found = stop
+    else
+      stop["selected"] = false
+    end
+  }
+%>
+
+
+
+  <div class="prizes-friends-mobile-container <% if found %>prize-mobile-<%=found["class"]%><% end %>">
+    <div class="page-content-top">
+      <p class="callout">Here's How It Works:</p>
+
+      <%
+        words = ''
+        if referrals_count == 1
+          words = 'friend has'
+        else
+          words = 'friends have'
+        end
+      %>
+
+      <% if referrals_count == 0 %>
+        <p class="place"><span>No</span> friends have joined...Yet!</p>
+      <% else %>
+        <p class="place"><span id="friend"><%= referrals_count %></span> <%= words %> joined</p>
+      <% end %>
+    </div>
+
+    <ul class="products">
+
+      <li class="title"><p class="friends">Friends Joined</p><p class="rewards">Yoda's Product</p></li>
+
+      <% stops.each do |stop| %>
+
+        <li class="product <% if stop["selected"] %>selected<% end %>">
+          <div class="circle"><%= stop["count"] %></div>
+          <div class="sep"></div>
+          <p><%= stop["html"].html_safe %></p>
+
+          <div class="tooltip">
+            <img src="<%= stop["image"] %>" height="254">
+          </div>
+        </li>
+
+      <% end %>
+      <div class="progress">
+        <div class="mover">
+          <div class="bar"></div>
+        </div>
+      </div>
+
+    </ul>
+    <div class="page-content-buttom">
+      <p class="check">Keep checking...</p>
+    </div>
+  </div>
+  <div class="second-mobile-container">
+    <div class="main-mobile-text-2">
+      <h1>Take a <span>ride</span></h1>
+      <p>Find a Yoda Nearby<br>Ride Anywhere<br>1€ to Start, 25cent/minute</p>
+    </div>
+    <%= image_tag('iphone_yoda_app.png') %>
+  </div>
+  <div class="third-mobile-container">
+    <div class="main-mobile-text-3">
+      <h1>More than an<br><span>electric motorbike</span></h1>
+      <p>Handy as a bike, fast as a motorbike,<br>safer than a scooter.</p>
+    </div>
+    <%= image_tag('yodazer_3.png') %>
+  </div>
+  <div class="fourth-mobile-container">
+    <div class="main-mobile-text-4">
+      <h1>Accessible to <span>anyone</span></h1>
+      <div class="license-text">
+        <p>Maximum speed based on your license</p>
+        <div class="no-license license">
+          <%= image_tag('license_no.svg', class: "license-no") %>
+          <p>Up to 25 km/h</p>
+        </div>
+        <div class="yes-license license">
+          <%= image_tag('license_ok.svg', class: "license-no") %>
+          <p>Up to 45 km/h</p>
+        </div>
+      </div>
+      <%= image_tag('dashboard_iphone.png') %>
+    </div>
+  </div>
+  <div class="contact-mobile-container">
+    <div class="contact-mobile-content">
+      <h3>Contact Us</h3>
+      <p>Say Hello, Our Team is Excited to Hear From You!</p>
+      <div class="contact-bullet-mobile-container">
+        <div class="bullet-mobile-group">
+          <div class="bullet-mobile">
+            <%= image_tag('contact_email.png') %>
+            <p class="title">Press</p>
+            <p class="info">contact@yoda-city.com</p>
+          </div>
+          <div class="bullet-mobile">
+            <%= image_tag('contact_phone.png') %>
+            <p class="title">Call Us</p>
+            <p class="info">+32-472-222205</p>
+          </div>
+        </div>
+        <div class="bullet-mobile-group">
+          <div class="bullet-mobile social-mobile">
+            <%= link_to "http://www.instagram.com" do %>
+              <%= image_tag('contact_insta.png') %>
+            <% end %>
+            <p class="title">Instagram</p>
+          </div>
+          <div class="bullet-mobile social-mobile">
+            <%= link_to "http://www.facebook.com" do %>
+              <%= image_tag('contact_facebook.png') %>
+            <% end %>
+            <p class="title">Facebook</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+      $(window).scroll(function() {
+          var height = $('.first-refer-friends-mobile-container').height();
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop >= height - 650) {
+              $('.navbar-container').addClass('solid-nav');
+          } else {
+              $('.navbar-container').removeClass('solid-nav');
+          }
+      });
+  });
+</script>
+

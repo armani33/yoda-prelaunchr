@@ -99,7 +99,7 @@
         text-transform: uppercase;
       }
       ul.products{
-        height: 105px;
+        height: 100px;
         width: 100%;
         margin-top: 60px;
         position: relative;
@@ -165,15 +165,6 @@
           //   background: image-url("refer/caret-selected.png") center center no-repeat;
           //   background-size: 16px 10px;
           // }
-          .selected .circle{
-            background: $green !important;
-            border-color: white !important;
-            color: $dark-grey !important;
-          }
-          .selected p{
-            color: $green;
-            font-weight: bold;
-          }
           .tooltip{
             height: 254px;
             width: 190px;
@@ -196,6 +187,15 @@
             letter-spacing: 1px;
             color: $dark-grey;
           }
+        }
+        .selected .circle{
+          background: $green !important;
+          border-color: white !important;
+          color: $dark-grey !important;
+        }
+        .selected p{
+          color: $green;
+          font-weight: bold;
         }
         li.product:last-child{
           margin-right: 0;

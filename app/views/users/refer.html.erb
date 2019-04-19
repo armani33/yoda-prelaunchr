@@ -40,7 +40,7 @@
 %>
 
 
-    <div class="refer-friends-bottom-prizes prize-three<% if found %>prize-<%= found["class"] %><% end %>">
+    <div class="refer-friends-bottom-prizes<% if found %>prize-<%= found["class"] %><% end %>">
       <div class="page-content">
         <p class="callout">Here's How It Works:</p>
         <ul class="products">
@@ -69,7 +69,6 @@
         </div>
 
 
-        <% referrals_count = 1 %>
         <%
           words = ''
           if referrals_count == 1
