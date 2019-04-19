@@ -21,8 +21,7 @@ h1{
     height: 100vh;
     img{
       width: 100%;
-      position: absolute;
-      bottom: 0;
+      border-bottom: 1px solid $green;
     }
     .refer-main-mobile-text-1{
       display: flex;
@@ -91,6 +90,7 @@ h1{
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       p.callout{
         text-align: center;
         font-size: 17px;
