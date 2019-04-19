@@ -233,6 +233,34 @@
         }
       }
     }
+    .prize-two{
+      .progress{
+        .mover{
+          .bar{ width: 305px; }
+        }
+      }
+    }
+    .prize-three{
+      .progress{
+        .mover{
+          .bar{ width: 566px; }
+        }
+      }
+    }
+    .prize-four{
+      .progress{
+        .mover{
+          .bar{ width: 820px; }
+        }
+      }
+    }
+    .prize-five{
+      .progress{
+        .mover{
+          .bar{ width: 1140px; }
+        }
+      }
+    }
     p.place{
       text-align: center;
       font-size: 16px;
@@ -243,6 +271,9 @@
       margin-top: 70px;
       span{
         color: #D90000;
+      }
+      #friend{
+        color: #02AD0F;
       }
     }
     p.check{
@@ -256,11 +287,6 @@
     }
   }
 }
-
-.refer-friends-bottom-prizes .prize-two .progress .mover .bar{ width: 312px; }
-.refer-friends-bottom-prizes .prize-three .progress .mover .bar{ width: 566px; }
-.refer-friends-bottom-prizes .prize-four .progress .mover .bar{ width: 820px; }
-.refer-friends-bottom-prizes .prize-five .progress .mover .bar{ width: 1120px; }
 
 
 

@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
     user_agent = request.env['HTTP_USER_AGENT']
     return unless user_agent && !user_agent.include?('facebookexternalhit/1.1')
 
-    redirect_to(proc { url_for(params.except(:ref)) })
+    redirect_to(proc { url_for(params.to_unsafe_h.except(:ref).merge(only_path: true)) })
   end
 end
