@@ -89,6 +89,82 @@
       </div>
     </div>
   </div>
+  <div class="second-container">
+    <div class="text-content">
+      <div class="main-text-2">
+        <h1>Take a <span>ride</span></h1>
+        <p>Find a Yoda Nearby<br>Ride Anywhere<br>1€ to Start, 25cent/minute</p>
+        <%= link_to root_path do %>
+          <%= image_tag('download_app.png', class: "download_app_btn") %>
+        <% end %>
+      </div>
+    </div>
+    <div class="iphone-container">
+      <%= image_tag('iphone_yoda_app.png', class: "iphone") %>
+    </div>
+  </div>
+  <div class="third-container">
+    <%= image_tag('yoda_bike_1.png', class: "yoda-bike-image") %>
+    <div class="text-container">
+      <div class="main-text-3">
+        <h1>More than an<br><span>electric motorbike</span></h1>
+        <p>Handy as a bike, fast as a motorbike,<br>safer than a e-scooter.</p>
+        <div class="form"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fourth-container">
+    <div class="text-container">
+      <div class="main-text-4">
+        <h1>Accessible to <span>anyone</span></h1>
+        <div class="license-text">
+          <p>Maximum speed based on your license</p>
+          <div class="no-license">
+            <%= image_tag('license_no.svg', class: "license-no") %>
+            <p>Up to 25 km/h</p>
+          </div>
+          <div class="yes-license">
+            <%= image_tag('license_ok.svg', class: "license-no") %>
+            <p>Up to 45 km/h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="iphone-container">
+      <%= image_tag('dashboard_iphone.png', class: "dashboard-iphone") %>
+    </div>
+  </div>
+  <div class="contact-container">
+    <div class="contact-content">
+      <h3>Contact Us</h3>
+      <p>Say Hello, Our Team is Excited to Hear From You!</p>
+      <div class="contact-bullet-container">
+        <div class="bullet">
+          <%= image_tag('contact_email.png', class: "bullet-contact") %>
+          <p class="title">Press</p>
+          <p class="info">contact@yoda-city.com</p>
+        </div>
+        <div class="bullet">
+          <%= image_tag('contact_phone.png', class: "bullet-contact") %>
+          <p class="title">Call Us</p>
+          <p class="info">+32-472-222205</p>
+        </div>
+        <div class="bullet social">
+          <%= link_to "http://www.instagram.com" do %>
+            <%= image_tag('contact_insta.png', class: "bullet-contact") %>
+          <% end %>
+          <p class="title">Instagram</p>
+        </div>
+        <div class="bullet social">
+          <%= link_to "http://www.facebook.com" do %>
+            <%= image_tag('contact_facebook.png', class: "bullet-contact") %>
+          <% end %>
+          <p class="title">Facebook</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
 </div>
 
 
