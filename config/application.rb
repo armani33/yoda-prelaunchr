@@ -15,7 +15,11 @@ module YodaPrelaunchr
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
+    config.session_store(
+      :cookie_store,
+      key: '_foo_session', # any value
+      expire_after: 30.weeks
+    )
 
     # decides whether the prelaunch campaign has ended or not
     config.ended = ENV['CAMPAIGN_ENDED'].to_s == 'false'
