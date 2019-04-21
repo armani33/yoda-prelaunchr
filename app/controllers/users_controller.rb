@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :skip_first_page, only: :new
+  # before_action :skip_first_page, only: :new
   before_action :set_variant, only: [:new, :refer]
   before_action :handle_ip, only: :create
 
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
   def skip_first_page
     return if Rails.application.config.ended
 
-    email = { value: cookies[:h_email], expires: 30.week.from_now }
+    email = cookies[:h_email]
     if email && User.find_by_email(email)
       redirect_to refer_a_friend_path
     else
