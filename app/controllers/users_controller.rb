@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
 
     if @user.save
-      cookies[:h_email] = { value: @user.email }
+      cookies[:h_email] = { value: @user.email, expires: 52.week.from_now }
       redirect_to refer_a_friend_path
     else
       logger.info("Error saving user with email, #{user_params}")
