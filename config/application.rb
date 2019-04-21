@@ -19,7 +19,7 @@ module YodaPrelaunchr
       :cookie_store,
       key: '_yoda_session', # any value
       expire_after: 30.weeks
-
+    )
     # decides whether the prelaunch campaign has ended or not
     config.ended = ENV['CAMPAIGN_ENDED'].to_s == 'false'
   end
