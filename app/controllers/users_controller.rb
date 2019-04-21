@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   end
 
   def refer
+    session[:expires_at] = Time.now + 5
     @nav_link_refer = true
     @user = User.find_by_email(cookies[:h_email])
 
