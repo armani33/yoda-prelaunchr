@@ -18,7 +18,9 @@ h1{
     width: 100%;
     background: image-url("sky_cloud_building_mobile.png") center center no-repeat;
     background-size: cover;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     img{
       width: 100%;
       border-bottom: 1px solid $green;
@@ -295,6 +297,7 @@ h1{
   .refer-mobile-container{
     .first-refer-friends-mobile-container{
       .refer-main-mobile-text-1{
+        margin-top: 45px;
         h2{
           margin-top: 130px;
         }
@@ -330,7 +333,14 @@ h1{
 @media (min-width: 351px), (max-width: 375px){
   .refer-mobile-container{
     .first-refer-friends-mobile-container{
+        img{
+          margin-top: 75px;
+        }
       .refer-main-mobile-text-1{
+        margin-top: 5px;
+        h2{
+          margin-top: 90px;
+        }
         .copy-link{
           width: 100%;
         }
@@ -350,7 +360,11 @@ h1{
 @media (max-width: 350px){
   .refer-mobile-container{
     .first-refer-friends-mobile-container{
+      img{
+        margin-top: 30px;
+      }
       .refer-main-mobile-text-1{
+        margin-top: 0;
         .copy-link{
           width: 100%;
         }
