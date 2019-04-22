@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
   before_create :create_referral_code
   before_create :downcase_email
-  # after_create :send_welcome_email
+  after_create :send_welcome_email
 
   REFERRAL_STEPS = [
     {
@@ -56,9 +56,9 @@ class User < ApplicationRecord
   def downcase_email
     self.email.downcase!
   end
-  # def send_welcome_email
-  #   UserMailer.delay.signup_email(self)
-  # end
+  def send_welcome_email
+    UserMailer.delay.signup_email(self)
+  end
 end
 
 
