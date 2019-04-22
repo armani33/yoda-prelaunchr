@@ -208,17 +208,7 @@ h1{
       .selected p{
         font-weight: bold;
       }
-      li.product:hover{
-        .circle{
-          color: $dark-grey;
-          background: $green;
-          border-color: white;
-        }
-        .tooltip{
-          display: block;
-        }
-      }
-      li.product:active{
+      li.product:hover, li.product:active, li.product:focus{
         .circle{
           color: $dark-grey;
           background: $green;
