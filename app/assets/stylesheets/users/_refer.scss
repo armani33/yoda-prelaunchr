@@ -10,7 +10,7 @@
     .refer-friends-top{
       flex-basis: 63%;
       display: flex;
-      background: image-url("refer/bg_refer.png");
+      background: image-url("refer/bg_respo_1.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom center;
@@ -473,6 +473,34 @@
         p.check{
           margin-top: 0;
           font-size: 14px
+        }
+      }
+      .prize-two{
+        .progress{
+          .mover{
+            .bar{ width: 275px; }
+          }
+        }
+      }
+      .prize-three{
+        .progress{
+          .mover{
+            .bar{ width: 463px; }
+          }
+        }
+      }
+      .prize-four{
+        .progress{
+          .mover{
+            .bar{ width: 650px; }
+          }
+        }
+      }
+      .prize-five{
+        .progress{
+          .mover{
+            .bar{ width: 900px; }
+          }
         }
       }
     }
