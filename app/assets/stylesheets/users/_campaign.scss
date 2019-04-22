@@ -29,6 +29,7 @@ input[type=submit]{
   &:hover{
     background-color: $green;
     color: $black;
+    transition: 0.8s;
   }
 }
 

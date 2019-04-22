@@ -10,7 +10,7 @@
     .refer-friends-top{
       flex-basis: 63%;
       display: flex;
-      background: image-url("refer/background-refer-friend.png");
+      background: image-url("refer/bg_refer.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom center;
@@ -290,8 +290,194 @@
   }
 }
 
+@media (max-width: 1550px), (max-height: 750px) {
+  .refer-friends-container{
+    .refer-friends-content{
+      .refer-friends-top{
+        flex-basis: 68%;
+        background: image-url("refer/bg_respo_1.png") 0 0 no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        .refer-friends-right{
+          margin-bottom: 0;
+          .text-part{
+            margin-top: 15px;
+          }
+          h1{
+            margin-bottom:23px;
+            font-size: 40px;
+            letter-spacing: 2px;
+          }
+          h2{
+            font-size: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+          }
+          p{
+            font-size: 12px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+          }
+          .social-links{
+            margin: 15px 0;
+            a:last-child{
+              margin-left: 70px;
+            }
+            i{
+              font-size: 30px;
+              color: $black;
+            }
+          }
+        }
+      }
+      .refer-friends-bottom-prizes{
+        flex-basis: 32%;
+        .page-content{
+        }
+        ul.products{
+          margin-top: 30px;
+        }
+        .progress{
+          top: 99px;
+        }
+        p.place{
+          margin-top: 20px;
+          font-size: 15px
+        }
+        p.check{
+          margin-top: 0;
+          font-size: 14px
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px), (max-height: 720px) {
+  .refer-friends-container{
+    .refer-friends-content{
+      .refer-friends-top{
+        flex-basis: 75%;
+        .refer-friends-right{
+          margin-bottom: 0;
+          .text-part{
+            margin-top: 35px;
+          }
+          h1{
+            margin-bottom:15px;
+            font-size: 38px;
+            letter-spacing: 2px;
+          }
+          h2{
+            font-size: 18px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+          }
+          p{
+            font-size: 12px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+          }
+          .social-links{
+            margin: 15px 0;
+            a:last-child{
+              margin-left: 70px;
+            }
+            i{
+              font-size: 30px;
+              color: $black;
+            }
+          }
+        }
+      }
+      .refer-friends-bottom-prizes{
+        flex-basis: 25%;
+        .page-content{
+        }
+        ul.products{
+          margin-top: 30px;
+        }
+        .progress{
+          top: 99px;
+        }
+        p.place{
+          margin-top: 20px;
+          font-size: 15px
+        }
+        p.check{
+          margin-top: 0;
+          font-size: 14px
+        }
+      }
+    }
+  }
+}
 
 
+@media (max-width: 1220px), (max-height: 600px) {
+  .refer-friends-container{
+    .refer-friends-content{
+      .refer-friends-top{
+        flex-basis: 75%;
+        .refer-friends-right{
+          margin-bottom: 0;
+          .text-part{
+            margin-top: 10px;
+          }
+          h1{
+            margin-bottom:12px;
+            font-size: 30px;
+            letter-spacing: 2px;
+          }
+          h2{
+            font-size: 15px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+          }
+          p{
+            font-size: 10px;
+            margin-top: 11px;
+            letter-spacing: 1px;
+          }
+          .social-links{
+            margin: 12px 0;
+            a:last-child{
+              margin-left: 70px;
+            }
+            i{
+              font-size: 28px;
+            }
+          }
+        }
+      }
+      .refer-friends-bottom-prizes{
+        flex-basis: 25%;
+        .page-content{
+          width: 900px;
+        }
+        ul.products{
+          margin-top: 30px;
+          li.product{
+            margin-right: 58px;
+          }
+          li.title{
+            margin-right: 40px;
+          }
+        }
+        .progress{
+          top: 99px;
+        }
+        p.place{
+          margin-top: 20px;
+          font-size: 15px
+        }
+        p.check{
+          margin-top: 0;
+          font-size: 14px
+        }
+      }
+    }
+  }
+}
 
 
 
