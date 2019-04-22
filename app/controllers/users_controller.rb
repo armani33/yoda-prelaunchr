@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :skip_first_page, only: :new
   before_action :set_variant, only: [:new, :refer]
-  before_action :handle_ip, only: :create
+  # before_action :handle_ip, only: :create
 
   def new
     @user = User.new
