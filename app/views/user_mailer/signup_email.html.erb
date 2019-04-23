@@ -434,7 +434,7 @@
                                   <table border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                       <td>
-                                        <p class="copy-link"><%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>
+                                        <p class="copy-link"><%= Rails.application.config.action_mailer.default_url_options[:host] || "" %>?ref=<%= @user.referral_code %>
                                         </p>
                                       </td>
                                     </tr>
@@ -442,7 +442,7 @@
                                 </td>
                               </tr>
                             </table>
-                            <table style="margin: 0 auto; padding: 0; width: 250px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; background: white;" width='200' cellspacing='0' cellpadding='0' bgcolor="#FFFFFF">
+                            <table style="margin: 0 auto; padding: 0; width: 200px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; background: white;" width='200' cellspacing='0' cellpadding='0' bgcolor="#FFFFFF">
                                 <tr>
                                     <td width="80" align="right">
                                         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options.to_s || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" style="outline: 0; border: 0;" target="_blank">

@@ -1,4 +1,4 @@
- # Preview this email at http://localhost:3000/rails/mailers/user_mailer/signup_email
+  # Preview this email at http://localhost:3000/rails/mailers/user_mailer/signup_email
 class UserMailer < ApplicationMailer
   def signup_email(user)
     @user = user
