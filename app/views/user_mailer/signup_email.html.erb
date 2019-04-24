@@ -446,14 +446,14 @@
                             <table style="margin: 0 auto; padding: 0; width: 200px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; background: white;" width='200' cellspacing='0' cellpadding='0' bgcolor="#FFFFFF">
                                 <tr>
                                     <td width="80" align="right">
-                                        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options.to_s || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" style="outline: 0; border: 0;" target="_blank">
-                                            <img src="https://en.facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png" alt="Share on Facebook" style="display: block; width: 35px; margin: 0; padding: 0; border: 0;">
+                                        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=YodaCity" style="outline: 0; border: 0;" target="_blank">
+                                            <img src="http://i66.tinypic.com/i5yk21.png" alt="Share on Facebook" style="display: block; width: 35px; margin: 0; padding: 0; border: 0;">
                                         </a>
                                     </td>
                                     <td width="200"></td>
                                     <td width="80">
-                                        <a href="http://twitter.com/share?url=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options.to_s || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(@twitter_message) %>" style="outline: 0; border: 0;" target="_blank">
-                                            <img src="https://www.hastac.org/sites/default/files/styles/post_image/public/upload/images/post/twitter-logo.png?itok=3FCvLoy4" alt="Share on Twitter" style="display: block; width: 35px; margin: 0; padding: 0; border: 0;">
+                                        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(@twitter_message) %>" style="outline: 0; border: 0;" target="_blank">
+                                            <img src="http://i66.tinypic.com/37ma.png" alt="Share on Twitter" style="display: block; width: 35px; margin: 0; padding: 0; border: 0;">
                                         </a>
                                     </td>
                                 </tr>
@@ -464,6 +464,7 @@
                       <p>If you have any question, you can reply to this email and we will come back as soon as possible.</p>
                       <p>Welcome aboard,
                       <br>The YodaCity Team</p>
+                      <img src="http://i63.tinypic.com/nb6e86.jpg" style="width: 30%" alt="logo" />
                       <!-- Sub copy -->
                       <table class="body-sub">
                         <tr>
