@@ -26,21 +26,21 @@ class User < ApplicationRecord
     },
     {
       'count' => 10,
-      'html' => '15 Rides<br> + 75 minutes Free',
+      'html' => '15 Rides<br> + 30 minutes Free',
       'class' => 'three',
       # 'image' => ActionController::Base.helpers.asset_path(
       #   'refer/truman@2x.png')
     },
     {
       'count' => 25,
-      'html' => '40 Rides<br> + 200 minutes Free',
+      'html' => '40 Rides<br> + 80 minutes Free<br>+ 1 T-shirt',
       'class' => 'four',
       # 'image' => ActionController::Base.helpers.asset_path(
       #   'refer/winston@2x.png')
     },
     {
       'count' => 50,
-      'html' => '100 Rides<br> + 500 minutes Free',
+      'html' => '100 Rides<br> + 200 minutes Free<br>+ 1 T-shirt',
       'class' => 'five',
       # 'image' => ActionController::Base.helpers.asset_path(
       #   'refer/blade-explain@2x.png')

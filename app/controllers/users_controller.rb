@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :skip_first_page, only: :new
   before_action :set_variant, only: [:new, :refer]
-  before_action :handle_ip, only: :create
+  # before_action :handle_ip, only: :create
 
   def new
     @user = User.new
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       redirect_to refer_a_friend_path
     else
       logger.info("Error saving user with email, #{user_params}")
-      redirect_to root_path, alert: 'Something went wrong!'
+      redirect_to root_path, alert: 'This user already subscribed'
     end
   end
 
