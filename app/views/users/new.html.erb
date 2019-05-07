@@ -6,7 +6,7 @@
       <div class="first-container-right">
         <div class="text-part">
           <h1><span>Yoda</span> is coming</h1>
-          <h2>BEST WAY TO MOVE AROUND CITIES</h2>
+          <h2>RIDE ANYWHERE WITH FUN</h2>
         </div>
       </div>
     </div>
@@ -40,17 +40,13 @@
     <%= image_tag('yoda_bike_1.png', class: "yoda-bike-image") %>
     <div class="text-container">
       <div class="main-text-3">
-        <h1>More than an<br><span>electric motorbike</span></h1>
-        <p>Handy as a bike, fast as a motorbike,<br>safer than a e-scooter.</p>
-        <div class="form">
-          <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-            <% if Rails.application.config.ended %>
-              <%= render "users/campaign_ended" %>
-            <% else %>
-              <%= render "users/campaign_ongoing" %>
-            <% end %>
-          </div>
-        </div>
+        <h1>A <span>motorbike</span> that<br> feels as riding a bike</h1>
+        <h2>How does it feel?</h2>
+        <ul>
+          <li>Easy</li>
+          <li>Safe</li>
+          <li>Fun</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -62,18 +58,29 @@
           <p>Maximum speed based on your license</p>
           <div class="no-license">
             <%= image_tag('license_no.svg', class: "license-no") %>
-            <p>Up to 25 km/h</p>
+            <p>Up to 25 km/h <span>(without a license)</span></p>
           </div>
           <div class="yes-license">
             <%= image_tag('license_ok.svg', class: "license-no") %>
-            <p>Up to 45 km/h</p>
+            <p>Up to 45 km/h <span>(with a license)</span></p>
           </div>
         </div>
       </div>
     </div>
     <div class="iphone-container">
-      <%= image_tag('dashboard_iphone.png', class: "dashboard-iphone") %>
+      <%= image_tag('dashboard_iphone1.png', class: "dashboard-iphone") %>
     </div>
+  </div>
+  <div class="fifth-container">
+      <%= image_tag('YODA_handlebar_cable.png') %>
+      <div class="text-container">
+        <h2>A comfortable <span>ride</span></h2>
+        <ul>
+          <li>Charge your phone</li>
+          <li>Answer calls in the helmet</li>
+          <li>Follow your GPS</li>
+        </ul>
+      </div>
   </div>
   <div class="contact-container">
     <div class="contact-content">
@@ -97,7 +104,7 @@
           <p class="title">Instagram</p>
         </div>
         <div class="bullet social">
-          <%= link_to "http://www.facebook.com" do %>
+          <%= link_to "http://www.facebook.com/yodacity", target: "_blank" do %>
             <%= image_tag('contact_facebook.png', class: "bullet-contact") %>
           <% end %>
           <p class="title">Facebook</p>

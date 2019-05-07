@@ -19,14 +19,14 @@ class User < ApplicationRecord
   REFERRAL_STEPS = [
     {
       'count' => 5,
-      'html' => '7 Rides<br>Free',
+      'html' => '10 Rides<br>Free',
       'class' => 'two',
       # 'image' =>  ActionController::Base.helpers.asset_path(
       #   'refer/cream-tooltip@2x.png')
     },
     {
       'count' => 10,
-      'html' => '15 Rides<br> + 30 minutes Free',
+      'html' => '20 Rides<br> + 30 minutes Free',
       'class' => 'three',
       # 'image' => ActionController::Base.helpers.asset_path(
       #   'refer/truman@2x.png')
