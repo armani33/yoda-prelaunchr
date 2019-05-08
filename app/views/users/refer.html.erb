@@ -89,16 +89,16 @@
       </div>
     </div>
   </div>
-  <!-- <div class="pre-order-container">
+  <div class="pre-order-container">
     <p>YOU CAN ALSO MAKE A PRE-ORDER</p>
     <h2>PRE-ORDER NOW 150 unlocks + 400 minutes</h2>
     <div class="prices">
       <p id="price-250">250€</p>
-      <p id="price-50">50€</p>
+      <p id="price-50"><%= humanized_money(@product.price) %>€</p>
     </div>
-    <p class="pre-order-btn">PRE-ORDER 50€</p>
+    <%= render 'payments/new' %>
     <a href="#footer">You got a question?</a>
-  </div> -->
+  </div>
   <div class="second-container">
     <div class="text-content">
       <div class="main-text-2">

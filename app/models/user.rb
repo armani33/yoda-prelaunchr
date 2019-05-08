@@ -4,6 +4,7 @@ class User < ApplicationRecord
   belongs_to :referrer, class_name: 'User', foreign_key: 'referrer_id', required: false
   has_many :referrals, class_name: 'User', foreign_key: 'referrer_id'
 
+  has_many :orders
 
   validates :email, presence: true, uniqueness: true, format: {
     with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
