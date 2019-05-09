@@ -14,13 +14,11 @@ class PaymentsController < ApplicationController
       email:  params[:stripeEmail]
     )
 
-    # if the email used for the order is the same of
+
+    # if the email used for the order is the same of email already in database
     if User.find_by_email(customer.email)
       @user = User.find_by_email(customer.email)
       @user.update(stripe_email: "#{customer.email}")
-      #  = User.find_by_email(customer.email)
-      # @user.stripe_email = customer.email
-      # @user.save
     end
 
     charge = Stripe::Charge.create(
@@ -32,7 +30,7 @@ class PaymentsController < ApplicationController
 
     @order.update(payment: charge.to_json, state: 'paid', email: "#{customer.email}")
 
-    UserMailer.confirm_preorder_email(@order, @user).deliver_now
+    UserMailer.confirm_preorder_email(@order).deliver_now
 
     redirect_to order_path
 

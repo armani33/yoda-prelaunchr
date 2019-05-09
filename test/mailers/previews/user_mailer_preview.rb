@@ -8,8 +8,7 @@ class UserMailerPreview < ActionMailer::Preview
   end
 
   def confirm_preorder_email
-    user = User.last
     order = Order.last
-    UserMailer.confirm_preorder_email(order, user)
+    UserMailer.confirm_preorder_email(order)
   end
 end
