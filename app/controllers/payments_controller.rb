@@ -28,7 +28,7 @@ class PaymentsController < ApplicationController
       currency:     @order.amount.currency
     )
 
-    @order.update(payment: charge.to_json, state: 'paid', email: customer.email)
+    @order.update(payment: charge.to_json, state: 'paid', email: "#{customer.email}")
 
     UserMailer.confirm_preorder_email(@order, @user).deliver_now
 
