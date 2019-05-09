@@ -12,15 +12,22 @@ class PaymentsController < ApplicationController
       source: params[:stripeToken],
       email:  params[:stripeEmail]
     )
+    # store this customer id that stripe generate with the user
+    @user = User.find_by_email(cookies[:h_email])
+    @user.stripe_id = customer
+    @user.save
 
     charge = Stripe::Charge.create(
-      customer:     customer.id,   # You should store this customer id and re-use it.
+      customer:     customer.id,
       amount:       @amount,
-      description:  "Payment for 150 Unlocks + 400 Minutes.  Order number  #{ 333 + @order.id}",
+      description:  "YodaCity: Pre-order 150 Unlocks + 400 Minutes.  Order number  #{ 333 + @order.id}",
       currency:     @order.amount.currency
     )
 
     @order.update(payment: charge.to_json, state: 'paid')
+
+    UserMailer.confirm_preorder_email(@order, @user).deliver_now
+
     redirect_to order_path(@order)
 
   rescue Stripe::CardError => e

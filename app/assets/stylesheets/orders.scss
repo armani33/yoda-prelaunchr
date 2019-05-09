@@ -1,3 +1,70 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ****SHOW PAGE****
+
+nav{
+  padding: 15px 0;
+  background-color: $green;
+  p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $nav-menu-font;
+    text-align: center;
+  }
+}
+.order-container{
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .order-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid $light-grey;
+    box-shadow: 0 0 2px $light-grey;
+    .up-content{
+      text-align: center;
+      background-color: $light-grey;
+      width: 100%;
+      padding-bottom: 40px;
+      font-family: $nav-menu-font;
+      img{
+        margin: 30px auto;
+      }
+      p{
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      a{
+        text-decoration: none;
+        padding: 8px;
+        background-color: white;
+        border: 1px solid $green;
+        border-radius: 3px;
+        color: $dark-grey;
+        &:hover{
+          background-color: $green;
+          transition: 0.5s;
+        }
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 30px 15px;
+      font-family: $body-font;
+      li{
+        text-align: center;
+        span{
+          font-weight: 500;
+
+        }
+      }
+    }
+    a{
+      text-decoration: none;
+      color: $dark-grey;
+    }
+  }
+}

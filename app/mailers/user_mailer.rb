@@ -8,4 +8,11 @@ class UserMailer < ApplicationMailer
 
     mail(to: @user.email, subject: 'Thanks for signing up!')
   end
+
+  def confirm_preorder_email(order, user)
+    @order = order
+    @user = user
+
+    mail(to: @user.email, subject: 'Thank you for your order!')
+  end
 end

@@ -5,6 +5,7 @@ ActiveAdmin.register User do
     column :email
     column :referral_code
     column :referrer_id
+    column :stripe_id
     column :created_at
     column :updated_at
   end

@@ -1,2 +1,19 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<nav class="nav-order-success">
+  <p>CONFIRMATION!</p>
+</nav>
+<div class="order-container">
+  <div class="order-content">
+    <div class="up-content">
+      <%= image_tag('success_order.png') %>
+      <p>Your payment was successful</p>
+      <%= link_to "Thanks, I'm Done", root_path%>
+    </div>
+    <ul>
+      <li><span>Order number:</span> <%= @order.id + 333 %></li>
+      <li><span>Amount:</span> 49€</li>
+      <li><span>Payment Method:</span> Credit Card</li>
+      <li><span>Confirmation email:</span> <%= @user.email %></li>
+    </ul>
+    <a href="https://prelaunch.yoda-city.com#footer" target="_black">You got a question?</a>
+  </div>
+</div>
