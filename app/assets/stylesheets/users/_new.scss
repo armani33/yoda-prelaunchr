@@ -73,6 +73,14 @@
           color: $green;
         }
       }
+      p.no-newsletter{
+        color: $light-grey;
+        font-size: 18px;
+        font-family: $nav-menu-font;
+        margin: 0;
+        padding: 0;
+        margin-left: -20px;
+      }
     }
   }
 }

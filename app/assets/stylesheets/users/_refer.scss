@@ -330,25 +330,36 @@
         color: $black;
       }
     }
+    p{
+      margin: 0 0 25px;
+      font-size: 27px;
+      border-top: 1px solid $dark-grey;
+      letter-spacing: 4px;
+      span{
+        color: $green;
+      }
+    }
     .prices{
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 5px;
       #price-250{
-        text-decoration: line-through red;
+        text-decoration: line-through;
         margin-right: 9px;
-        font-size: 18px;
+        font-size: 19px;
+        border: none;
       }
       #price-50{
         margin-left: 9px;
-        font-size: 28px;
+        font-size: 33px;
         color: $black;
+        border: none;
       }
     }
     a{
-      margin-top:45px;
+      margin-top:25px;
       margin-bottom: -40px;
       text-align: center;
       color: $dark-grey;
