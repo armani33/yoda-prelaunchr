@@ -352,6 +352,7 @@ h1{
       margin-bottom: 5px;
       #price-250{
         text-decoration: line-through red;
+        -webkit-text-decoration-line: line-through;
         margin-right: 9px;
         font-size: 18px;
       }
