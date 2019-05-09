@@ -313,7 +313,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     border-radius: 2px;
     border: 1px solid $light-grey;
     box-shadow: 0 0 2px $light-grey;
@@ -323,7 +323,7 @@ h1{
       color: #3E3D3D;
       font-weight: 500;
       font-family: $body-font;
-      margin: 0 0 30px 0;
+      margin: 10px 0 30px 0;
       letter-spacing: 1px;
     }
     h2{
@@ -339,8 +339,20 @@ h1{
         color: $green;
       }
       span.offer-prices{
-        font-size: 20px;
+        font-size: 16px;
         color: $black;
+      }
+    }
+    img{
+      border-bottom: 1px solid $dark-grey;
+      width: 80%;
+    }
+    p.get-for-life{
+      margin: 0;
+      font-size: 29px;
+      letter-spacing: 4px;
+      span{
+        color: $green;
       }
     }
     .prices{
@@ -364,7 +376,7 @@ h1{
     }
     a{
       margin-top:40px;
-      margin-bottom: -30px;
+      margin-bottom: -20px;
       text-align: center;
       color: $dark-grey;
       text-decoration: none;
@@ -456,6 +468,17 @@ h1{
   }
   .pre-order-container-mobile{
     margin-top: 0;
+    .pre-order-content-mobile{
+      p{
+       font-size: 13px;
+      }
+      h2{
+        span.offer-prices{
+          font-size: 15px;
+          color: $black;
+        }
+      }
+    }
   }
 }
 
