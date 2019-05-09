@@ -11,7 +11,7 @@ nav{
   }
 }
 .order-container{
-  height: 75vh;
+  height: 93.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,7 @@ nav{
     border-radius: 2px;
     border: 1px solid $light-grey;
     box-shadow: 0 0 2px $light-grey;
+    margin-top: -50px;
     .up-content{
       text-align: center;
       background-color: $light-grey;
@@ -55,7 +56,7 @@ nav{
       padding: 30px 15px;
       font-family: $body-font;
       li{
-        text-align: center;
+        text-align: left;
         span{
           font-weight: 500;
 
