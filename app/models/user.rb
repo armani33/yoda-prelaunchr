@@ -35,8 +35,8 @@ class User < ApplicationRecord
       'count' => 25,
       'html' => '40 Rides<br> + 80 minutes Free<br>+ 1 T-shirt',
       'class' => 'four',
-      # 'image' => ActionController::Base.helpers.asset_path(
-      #   'refer/winston@2x.png')
+      'image' => ActionController::Base.helpers.asset_path(
+        'refer/reduc_3.png')
     },
     {
       'count' => 50,
