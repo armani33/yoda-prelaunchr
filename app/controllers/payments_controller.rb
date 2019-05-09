@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
   def new
   end
 
-  def show
+  def success_order
     @order
   end
 
@@ -36,7 +36,8 @@ class PaymentsController < ApplicationController
 
     UserMailer.confirm_preorder_email(@order).deliver_now
 
-    redirect_to order_url(@order.id)
+
+    render 'success_order'
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
