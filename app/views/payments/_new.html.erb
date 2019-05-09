@@ -1,0 +1,9 @@
+<%= form_tag payments_path do %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe = ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+    data-name="YodaCity Pre-order"
+    data-email="<%= cookies[:h_email] %>"
+    data-description="150 Unlocks + 400 Minutes"
+    data-amount="<%= @product.price_cents %>"
+    data-currency="<%= @product.price.currency %>"></script>
+<% end %>

@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   unless Rails.application.config.consider_all_requests_local
     get '*not_found', to: 'users#redirect', format: false
   end
+  resources :payments, only: [ :new, :create ]
+  resources :orders, only: [ :show, :create ]
+  #   resources :payments, only: [ :new, :create ]
+  # end
 end

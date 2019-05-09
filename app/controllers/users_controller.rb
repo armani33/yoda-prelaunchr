@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     session[:expires_at] = Time.now + 5
     @nav_link_refer = true
     @user = User.find_by_email(cookies[:h_email])
+    @product = Product.first
 
     if @user.nil?
       respond_to do |format|
