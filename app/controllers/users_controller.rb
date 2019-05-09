@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     @nav_link_refer = true
     @user = User.find_by_email(cookies[:h_email])
 
-    @product = Product.first
+    @product = Product.last
 
     if @user.nil?
       respond_to do |format|
