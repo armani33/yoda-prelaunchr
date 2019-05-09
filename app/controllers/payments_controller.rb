@@ -36,7 +36,7 @@ class PaymentsController < ApplicationController
 
     UserMailer.confirm_preorder_email(@order).deliver_now
 
-    redirect_to order_path(@order.id)
+    redirect_to order_url(@order.id)
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
