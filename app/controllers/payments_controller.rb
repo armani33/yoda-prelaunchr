@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    pre_product = Product.first
+    pre_product = Product.last
     @order  = Order.create!(amount: pre_product.price, state: 'pending')
 
 
