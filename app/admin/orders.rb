@@ -1,11 +1,10 @@
-# Export to CSV with the referrer_id
-ActiveAdmin.register User do
+ActiveAdmin.register Order do
   csv do
     column :id
     column :email
-    column :referral_code
+    column :state
     column :referrer_id
-    column :stripe_email
+    column :amount_cents
     column :created_at
     column :updated_at
   end

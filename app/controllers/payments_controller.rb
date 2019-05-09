@@ -6,16 +6,20 @@ class PaymentsController < ApplicationController
     pre_product = Product.first
     @order  = Order.create!(amount: pre_product.price, state: 'pending')
 
+
     @amount = @order.amount_cents
 
     customer = Stripe::Customer.create(
       source: params[:stripeToken],
       email:  params[:stripeEmail]
     )
-    # store this customer id that stripe generate with the user
-    @user = User.find_by_email(cookies[:h_email])
-    @user.stripe_id = customer
-    @user.save
+
+    # if the email used for the order is the same of
+    if User.find_by_email(customer.email)
+      @user = User.find_by_email(customer.email)
+      @user.stripe_email = customer.email
+      @user.save
+    end
 
     charge = Stripe::Charge.create(
       customer:     customer.id,
@@ -24,7 +28,7 @@ class PaymentsController < ApplicationController
       currency:     @order.amount.currency
     )
 
-    @order.update(payment: charge.to_json, state: 'paid')
+    @order.update(payment: charge.to_json, state: 'paid', email: customer.email)
 
     UserMailer.confirm_preorder_email(@order, @user).deliver_now
 
