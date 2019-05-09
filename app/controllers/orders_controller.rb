@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
   def show
-    @order = Order.last
+    @order = Order.find(params[:id])
   end
 end
