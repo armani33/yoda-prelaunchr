@@ -36,7 +36,7 @@ class User < ApplicationRecord
       'count' => 25,
       'html' => '40 Rides<br> + 80 minutes Free<br>+ 1 T-shirt',
       'class' => 'four',
-      'image' => 'images/reduc_3.png'
+      'image' => ActionController::Base.helpers.image_path("reduc_3.png")
     },
     {
       'count' => 50,
