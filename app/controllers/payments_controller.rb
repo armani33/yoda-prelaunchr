@@ -17,8 +17,10 @@ class PaymentsController < ApplicationController
     # if the email used for the order is the same of
     if User.find_by_email(customer.email)
       @user = User.find_by_email(customer.email)
-      @user.stripe_email = customer.email
-      @user.save
+      @user.update(stripe_email: "#{customer.email}")
+      #  = User.find_by_email(customer.email)
+      # @user.stripe_email = customer.email
+      # @user.save
     end
 
     charge = Stripe::Charge.create(
@@ -32,7 +34,7 @@ class PaymentsController < ApplicationController
 
     UserMailer.confirm_preorder_email(@order, @user).deliver_now
 
-    redirect_to order_path(@order)
+    redirect_to order_path
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
