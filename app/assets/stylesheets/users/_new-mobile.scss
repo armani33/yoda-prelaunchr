@@ -285,9 +285,9 @@ h1{
       }
     }
     ul{
+      list-style: none;
       text-align: left;
       margin-bottom: 20px;
-      margin-left: 20px;
       li{
         font-family: $body-font;
         font-size: 17px;
