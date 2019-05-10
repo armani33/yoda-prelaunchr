@@ -11,4 +11,10 @@ class UserMailerPreview < ActionMailer::Preview
     order = Order.last
     UserMailer.confirm_preorder_email(order)
   end
+
+  def already_subscribe_email
+    user = User.last
+    referral_code = "a1ebd9cb4d"
+    UserMailer.already_subscribe_email(user, referral_code)
+  end
 end

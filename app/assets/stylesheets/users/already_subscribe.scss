@@ -1,0 +1,100 @@
+nav.nav-already-subscribe{
+  padding: 15px 0;
+  background-color: $green;
+  p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $nav-menu-font;
+    text-align: center;
+  }
+}
+
+.already-subscribe-container{
+  background-color: $light-grey;
+  height: 93vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .already-subscribe-content{
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #CCCCCC;
+    font-family: $body-font;
+    display: flex;
+    flex-direction: column;
+    .up-content{
+      flex-basis: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 2px;
+      font-size: 18px;
+      i{
+        font-size: 25px;
+        color: $dark-grey;
+        margin-left: 40px;
+        margin-right: -5px;
+      }
+    }
+    .bottom-content{
+      flex-basis: 90%;
+      display: flex;
+      .image-email{
+        flex-basis: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 190px;
+          margin-bottom: 30px;
+        }
+      }
+      .text-email{
+        flex-basis: 55%;
+        p{
+          margin-top: 40px;
+          font-size: 18px;
+        }
+        form{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 350px;
+          margin-top: 80px;
+          input#user_email.send-email{
+            background-color: transparent;
+            text-align: left;
+            border-radius: 2px;
+            border: 1px solid $black;
+            font-size: 15px;
+            font-weight: 500;
+            width: 328px;
+            padding: 10px;
+            margin-left: 4px;
+            margin-bottom: 10px;
+          }
+          input[type=submit]{
+            background-color: $green;
+            padding: 10px;
+            text-align: center;
+            border-radius: 2px;
+            border: 1px solid $green;
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+            width: 100%;
+            &:hover{
+              background-color: $green;
+              color: $black;
+              transition: 0.8s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
