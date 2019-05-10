@@ -25,10 +25,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
 
-
-    if @user.save
-      cookies[:h_email] = { value: @user.email, expires: 52.week.from_now }
-      redirect_to refer_a_friend_path
+    if User.find_by_email(@user.email).nil?
+      if @user.save
+        cookies[:h_email] = { value: @user.email, expires: 52.week.from_now }
+        redirect_to refer_a_friend_path
+      else
+        logger.info("Error saving user with email, #{user_params}")
+        redirect_to root_path, alert: 'This user already subscribed'
+      end
     else
       logger.info("Error saving user with email, #{user_params}")
       redirect_to root_path, alert: 'This user already subscribed'
@@ -59,6 +63,29 @@ class UsersController < ApplicationController
 
   def redirect
     redirect_to root_path, status: 404
+  end
+
+
+  def already_subscribe
+    @user = User.new
+  end
+
+  def check_email
+    user = User.find_by_email(params[:user][:email])
+    if !(user.nil?)
+      referral_code = user.referral_code
+
+      UserMailer.already_subscribe_email(user, referral_code).deliver_now
+      redirect_to already_subscribe_path, alert: 'An email has been send to you '
+    else
+      redirect_to already_subscribe_path, alert: 'This email does not exist in our data base. Sorry.'
+    end
+  end
+
+  def verification_user_email
+    user = User.find_by_referral_code(params[:format])
+    cookies[:h_email] = { value: user.email, expires: 52.week.from_now }
+    redirect_to refer_a_friend_path
   end
 
   private

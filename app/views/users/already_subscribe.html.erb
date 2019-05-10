@@ -1,0 +1,28 @@
+<nav class="nav-already-subscribe">
+  <p>GET ACCESS TO YOUR PERSONAL PAGE AGAIN</p>
+</nav>
+<div class="already-subscribe-container">
+  <div class="already-subscribe-content">
+    <div class="up-content">
+      <h3>Get access to your account. Refer your friends again.</h3>
+      <%= link_to root_path do %>
+        <i class="fas fa-times"></i>
+      <% end %>
+    </div>
+    <div class="bottom-content">
+      <div class="image-email">
+        <%= image_tag("email/email_send_icon.png", class: "human-life-cycle") %>
+      </div>
+      <div class="text-email">
+        <p>Enter your email.<br>We will send you a <b>link</b> to access your page.</p>
+        <div class="form-email">
+          <%= form_for @user, url: check_email_path, method: :post do |f| %>
+            <%= f.text_field :email, :placeholder => "Enter Email", class: "send-email" %>
+            <input class="submit brandon" name="commit" type="submit" value="Send Email" />
+          <% end %>
+        </div>
+        <p class="alert" style="color: orange; font-weight: 400;"><%= alert %></p>
+      </div>
+    </div>
+  </div>
+</div>

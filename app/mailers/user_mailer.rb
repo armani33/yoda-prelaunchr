@@ -14,4 +14,11 @@ class UserMailer < ApplicationMailer
 
     mail(to: @order.email, subject: 'Thank you for your order!')
   end
+
+  def already_subscribe_email(user, referral_code)
+    @user = user
+    @referral_code = referral_code
+
+    mail(to: @user.email, subject: 'Get access to your YodaCity account again')
+  end
 end

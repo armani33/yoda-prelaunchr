@@ -12,7 +12,7 @@
         <div class="sep"></div>
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square" style="color: #001C7A;"></i></a>
       </div>
-      <p style="margin-top: 0px; margin-bottom: 20px; color: #001C7A;">Your unique link work with those two buttons :-)</p>
+      <p style="margin-top: 0px; margin-bottom: 20px; color: #001C7A;">Your unique link works with those two buttons too :-)</p>
       <p>You can also share your unique link via Email<br>Messenger or Instagram to earn YodaCity rewards.</p>
     </div>
     <%= image_tag('yoda_mobile.png', class: "yoda-image") %>
@@ -98,7 +98,7 @@
         <p id="price-50"><%= humanized_money(@product.price) %>€</p>
       </div>
       <%= render 'payments/new' %>
-      <a href="#footer">You got a question?</a>
+      <a href="https://prelaunch.yoda-city.com/refer-a-friend/#footer">You got a question?</a>
     </div>
   </div>
   <div class="second-mobile-container">
@@ -143,7 +143,7 @@
       <ul>
         <li>Charge your phone</li>
         <li>Answer calls in the helmet</li>
-        <li>Follow your navigation</li>
+        <li>Use your phone to navigate</li>
       </ul>
     </div>
     <%= image_tag('YODA_handlebar_cable.png') %>
