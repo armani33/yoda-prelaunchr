@@ -12,11 +12,12 @@
             <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
             <% twitter_message = "#Mobility is evolving. Excited for YodaCity to launch." %>
             <div class="social-links">
-              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=YodaCity" class="fb" target="_blank"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
+              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=YodaCity" class="fb" target="_blank"><i class="fab fa-facebook" style="color: #001C7A;"></i></a>
               <div class="sep"></div>
-              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square" style="color: #1DA1F2;"></i></a>
+              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square" style="color: #001C7A;"></i></a>
             </div>
-            <p>Share your unique link via email, Facebook or Twitter<br>and earn YodaCity rewards when your friends join.</p>
+            <p style="margin-top: 0px; color: #001C7A;">Your unique link work with those two buttons :-)</p>
+            <p>You can also share your unique link via Email, Messenger<br>or Instagram to earn YodaCity rewards.</p>
           </div>
         </div>
     </div>
