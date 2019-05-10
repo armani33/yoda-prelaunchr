@@ -131,10 +131,10 @@ class UsersController < ApplicationController
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
       current_ip = IpAddress.create(address: address, count: 1)
-    elsif current_ip.count > 4
-      return redirect_to root_path, notice: 'IP address of your connection has already appeared
-                                      five times in our records. Try with your 4G.
-                                      Subscription with this wifi are blocked to prevent poeple abusing from our rewards. Thank You!'
+    elsif current_ip.count > 1
+      return redirect_to root_path, notice: 'IP address has already appeared
+                                      2 times in our records.
+                                      Subscription are blocked to prevent poeple abusing from our rewards. Thank You!'
     else
       current_ip.count += 1
       current_ip.save
