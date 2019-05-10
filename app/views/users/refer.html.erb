@@ -10,7 +10,7 @@
             <h2>DON'T LEAVE YOUR FRIENDS BEHIND</h2>
             <h1><span>INVITE</span> FRIENDS &<br>EARN PRODUCT</h1>
             <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+            <% twitter_message = "#Mobility is evolving. Excited for YodaCity to launch." %>
             <div class="social-links">
               <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=YodaCity" class="fb" target="_blank"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
               <div class="sep"></div>
@@ -137,7 +137,7 @@
       <div class="main-text-4">
         <h1>Accessible to <span>anyone</span></h1>
         <div class="license-text">
-          <p>Maximum speed based on your license</p>
+          <p>Maximum speed based on you.<br>Do you have a license?</p>
           <div class="no-license">
             <%= image_tag('license_no.svg', class: "license-no") %>
             <p>Up to 25 km/h <span>(without a license)</span></p>
@@ -160,7 +160,7 @@
         <ul>
           <li>Charge your phone</li>
           <li>Answer calls in the helmet</li>
-          <li>Follow your GPS</li>
+          <li>Follow your navigation</li>
         </ul>
       </div>
   </div>
@@ -177,7 +177,7 @@
         <div class="bullet">
           <%= image_tag('contact_phone.png', class: "bullet-contact") %>
           <p class="title">Call Us</p>
-          <p class="info">+32-472-222205</p>
+          <p class="info">+32(0)472.22.22.05</p>
         </div>
         <div class="bullet social">
           <%= link_to "http://www.instagram.com" do %>

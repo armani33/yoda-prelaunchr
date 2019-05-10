@@ -6,9 +6,9 @@
       <h2>DON'T LEAVE YOUR FRIENDS BEHIND</h2>
       <h1><span>INVITE</span> FRIENDS &<br>EARN PRODUCT</h1>
       <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
-      <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+      <% twitter_message = "#Mobility is evolving. Excited for YodaCity to launch." %>
       <div class="social-links">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" target="_blank"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=YodaCity" target="_blank"><i class="fab fa-facebook" style="color: #3B5998;"></i></a>
         <div class="sep"></div>
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><i class="fab fa-twitter-square" style="color: #1DA1F2;"></i></a>
       </div>
@@ -109,27 +109,43 @@
   </div>
   <div class="third-mobile-container">
     <div class="main-mobile-text-3">
-      <h1>More than an<br><span>electric motorbike</span></h1>
-      <p>Handy as a bike, fast as a motorbike,<br>safer than a scooter.</p>
+      <h1>A <span>motorbike</span> that<br> feels like riding a bike</h1>
+      <h2>How does it feel?</h2>
+      <ul>
+        <li>Easy</li>
+        <li>Safe</li>
+        <li>Effortless</li>
+        <li>Fun</li>
+      </ul>
     </div>
     <%= image_tag('yodazer_3.png') %>
   </div>
   <div class="fourth-mobile-container">
     <div class="main-mobile-text-4">
       <h1>Accessible to <span>anyone</span></h1>
-      <div class="license-text">
-        <p>Maximum speed based on your license</p>
-        <div class="no-license license">
+      <div class="license-text-mobile">
+        <p>Maximum speed based on you.<br>Do you have a license?</p>
+        <div class="no-license-mobile license-mobile">
           <%= image_tag('license_no.svg', class: "license-no") %>
           <p>Up to 25 km/h</p>
         </div>
-        <div class="yes-license license">
+        <div class="yes-license-mobile license-mobile">
           <%= image_tag('license_ok.svg', class: "license-no") %>
           <p>Up to 45 km/h</p>
         </div>
       </div>
-      <%= image_tag('dashboard_iphone.png') %>
     </div>
+  </div>
+  <div class="fifth-container-mobile">
+    <div class="text-container">
+      <h2>A <span>comfortable</span> ride</h2>
+      <ul>
+        <li>Charge your phone</li>
+        <li>Answer calls in the helmet</li>
+        <li>Follow your navigation</li>
+      </ul>
+    </div>
+    <%= image_tag('YODA_handlebar_cable.png') %>
   </div>
   <div class="contact-mobile-container">
     <div class="contact-mobile-content">
@@ -145,7 +161,7 @@
           <div class="bullet-mobile">
             <%= image_tag('contact_phone.png') %>
             <p class="title">Call Us</p>
-            <p class="info">+32-472-222205</p>
+            <p class="info">+32(0)472.22.22.05</p>
           </div>
         </div>
         <div class="bullet-mobile-group">
