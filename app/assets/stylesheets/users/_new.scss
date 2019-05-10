@@ -60,7 +60,8 @@
     justify-content: center;
     align-items: center;
     .form{
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 60px;
       p{
         color: white;
         font-family: $body-font;
@@ -80,6 +81,15 @@
         margin: 0;
         padding: 0;
         margin-left: -20px;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+        font-family: $nav-menu-font;
+        font-size: 16px;
+        padding: 5px 7px;
+        opacity: 0.7;
+        margin-top: 15px;
       }
     }
   }
@@ -661,12 +671,6 @@
     }
   }
 }
-
-
-
-
-
-
 
 
 
