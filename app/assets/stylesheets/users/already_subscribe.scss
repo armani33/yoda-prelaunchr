@@ -98,3 +98,100 @@ nav.nav-already-subscribe{
     }
   }
 }
+@media (max-width: 500px){
+  nav.nav-already-subscribe{
+    padding: 15px 0;
+    p{
+      font-size: 13px;
+    }
+  }
+  .already-subscribe-container{
+    .already-subscribe-content{
+      width: 90%;
+      .up-content{
+        font-size: 13px;
+        text-align: center;
+        i{
+          display: none;
+        }
+      }
+      .bottom-content{
+        flex-basis: 90%;
+        display: flex;
+        flex-direction: column;
+        .image-email{
+          flex-basis: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width: 100px;
+            margin-top: 20px;
+          }
+        }
+        .text-email{
+          flex-basis: 75%;
+          p{
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+          }
+          form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 35px;
+            input#user_email.send-email{
+              width: 89%;
+              padding: 8px;
+              margin-bottom: 7px;
+              margin-right: 4px;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              font-size: 12px;
+            }
+            input[type=submit]{
+              margin-left: 0;
+              width: 95%;
+              padding: 8px;
+              color: white;
+              border: 0;
+              font-size: 12px;
+              background-color: $black;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
