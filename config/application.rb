@@ -21,6 +21,6 @@ module YodaPrelaunchr
       expire_after: 30.weeks
     )
     # decides whether the prelaunch campaign has ended or not
-    config.ended = ENV['CAMPAIGN_ENDED'].to_s == 'false'
+    config.ended = ENV['CAMPAIGN_ENDED'].to_s == 'true'
   end
 end
