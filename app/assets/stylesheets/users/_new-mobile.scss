@@ -73,11 +73,11 @@ h1{
   color: $green;
 }
 .main-mobile-text-1 .form{
-  margin: 60px 15px 70px 15px;
+  // margin: 60px 15px 70px 15px;
 }
 @media (min-width: 376px), (max-width: 414px){
   .main-mobile-text-1 .form{
-    margin: 45px 25px 90px 25px;
+    // margin: 45px 25px 90px 25px;
   }
   .main-mobile-text-1{
     h1{
@@ -88,12 +88,12 @@ h1{
 }
 @media (max-width: 375px){
   .main-mobile-text-1 .form{
-    margin: 40px 25px 55px 25px;
+    // margin: 40px 25px 55px 25px;
   }
 }
 @media (max-width: 350px){
   .main-mobile-text-1 .form{
-    margin: 35px 0 50px 0;
+    // margin: 35px 0 50px 0;
   }
   .main-mobile-text-1{
     h1{
